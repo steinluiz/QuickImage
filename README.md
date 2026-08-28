@@ -1,10 +1,12 @@
-# QuickImage
 
-**Select any text, press one key, and the first image from the web is copied — ready to paste anywhere.**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/953f61d8-01bb-486e-995b-89a40bd5ab70" width="96">
+</p>
 
-No tabs to open, no searching, no saving files. Highlight a word, hit `Alt + I`, then `Ctrl + V` wherever you want the picture.
+<h1 align="center">QuickImage</h1>
 
----
+<p align="center">Select any text, press one key, and the first image is on your clipboard.</p>
+
 
 ## How to use it
 
@@ -26,16 +28,6 @@ That's it. The image is already on your clipboard.
 
 You're done. Try it anywhere: select text → `Alt + I` → `Ctrl + V`.
 
-**No installation. No Python. No extra folder.** It's one single file — you can even keep it on your Desktop.
-
-### "Windows protected your PC" popup?
-
-That's normal for small free apps that aren't signed. Click **More info** → **Run anyway**. It's safe.
-
-### Want it to start with Windows?
-
-Press `Win + R`, type `shell:startup`, press Enter, and drop a shortcut to `QuickImage.exe` in the folder that opens.
-
 ---
 
 ## The settings window
@@ -52,8 +44,9 @@ Right-click the tray icon (near the clock) and choose **Settings**, or double-cl
 | **Copy the image URL too** | Also copies the image's web link as text. |
 | **Show notifications** | A little popup when an image is copied. |
 | **Start hidden in the tray** | Skip the settings window when it launches. |
+| **Start with Windows** | Will start when you turn on your computer. |
 
-Everything you change is saved instantly — there's no Save button.
+Everything you change is saved instantly.
 
 ---
 
@@ -94,22 +87,7 @@ py -m PyInstaller --noconfirm --onefile --windowed --name QuickImage --icon Icon
 
 The result lands in `dist\QuickImage.exe`.
 
-**How images are found:** two keyless sources, no account or API key. **DuckDuckGo** for whole-web results, with **Openverse** (openly licensed images) as an automatic fallback. Google was dropped — it closed whole-web search to new users in January 2026.
-
-**Project layout:**
-
-```
-quickimage/
-  main.py       starts everything up
-  app.py        the hotkey, the worker, the tray icon
-  gui.py        the settings window
-  widgets.py    the custom-drawn controls
-  theme.py      colors and fonts
-  search.py     finds and downloads the image
-  selection.py  reads the highlighted text
-  winclip.py    puts the image on the clipboard
-  config.py     saves your settings
-```
+**How images are found:** two keyless sources, no account or API key. **DuckDuckGo** for whole-web results, with **Openverse** (openly licensed images) as an automatic fallback.
 
 Settings are stored in `%APPDATA%\QuickImage\config.json`.
 
