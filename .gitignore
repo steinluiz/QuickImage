@@ -1,0 +1,21 @@
+# python cache
+__pycache__/
+*.py[cod]
+
+# pyinstaller build output
+build/
+dist/
+*.spec
+
+*.bat
+
+# local config / envs
+.venv/
+venv/
+env/
+
+# editor / os junk
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
